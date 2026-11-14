@@ -1,5 +1,19 @@
 # Alpine BBR + fq
 
+## 一键安装
+
+在 Alpine 上以 `root` 执行下面的命令，默认配置 `eth0`。
+
+```sh
+wget -O /tmp/install-alpine-bbr-fq.sh https://raw.githubusercontent.com/brian952700/alpine-bbr-fq/main/install-alpine-bbr-fq.sh && sh /tmp/install-alpine-bbr-fq.sh
+```
+
+使用其他网卡时，在命令末尾加上网卡名，例如 `ens3`。
+
+[下载安装脚本](https://raw.githubusercontent.com/brian952700/alpine-bbr-fq/main/install-alpine-bbr-fq.sh)
+
+## 本地运行
+
 在使用 OpenRC 的 Alpine Linux 上启用 TCP BBR，并将指定网卡的根队列切换为 `fq`。默认网卡为 `eth0`。
 
 以 root 在仓库目录下执行：
